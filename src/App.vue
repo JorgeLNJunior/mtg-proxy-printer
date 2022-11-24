@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+
 import { deckExample } from './texts/texts'
+
+import AppBar from './components/AppBar.vue'
 
 const deck = ref<string>('')
 
@@ -11,9 +14,7 @@ function clear(): void {
 
 <template>
   <v-layout>
-    <v-app-bar color="primary">
-      <v-app-bar-title class="select-none">Proxy Printer</v-app-bar-title>
-    </v-app-bar>
+    <AppBar />
     <v-main>
       <v-container fluid>
         <v-row justify="center" class="ma-4">
